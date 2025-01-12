@@ -15,6 +15,6 @@ Pythonladora is a simple interactive calculator built with Python. It allows use
 4. View the result or exit the program.
 
 ## Technologies Used
-- Python 3.x
+- Python 3.12
 
 Feel free to fork and contribute to improve this project!
