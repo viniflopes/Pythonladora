@@ -1,0 +1,83 @@
+Documentação - Calculadora em Shell Script
+
+Descrição
+
+Este é um script de calculadora desenvolvido em Shell Script, permitindo operações básicas: adição, subtração, multiplicação e divisão.
+
+Requisitos
+
+Sistema Unix/Linux
+
+Intérprete Bash
+
+Utilitário bc instalado
+
+Como Criar e Executar o Script
+
+Abra o terminal.
+
+Crie o arquivo de script com o comando: nano calculadora.sh
+
+Adicione o código do script no arquivo calculadora.sh:
+
+#!/bin/bash
+echo "Digite o primeiro número:"
+read num1
+echo "Digite o segundo número:"
+read num2
+echo -e "\nEscolha uma operação:"
+echo "1 - Adição"
+echo "2 - Subtração"
+echo "3 - Multiplicação"
+echo "4 - Divisão"
+echo "5 - Sair"
+read escolha
+case $escolha in
+    1) echo "Resultado: $(($num1 + $num2))";;
+    2) echo "Resultado: $(($num1 - $num2))";;
+    3) echo "Resultado: $(($num1 * $num2))";;
+    4) if [ $num2 -ne 0 ]; then echo "Resultado: $(($num1 / $num2))"; else echo "Erro: divisão por zero!"; fi;;
+    5) echo "Saindo..."; exit;;
+    *) echo "Opção inválida!";;
+esac
+
+Salve e saia do editor de texto (Ctrl + X, depois Y e Enter).
+
+Torne o arquivo executável: chmod +x calculadora.sh
+
+Execute o script: ./calculadora.sh
+
+Instruções de Uso
+
+O programa solicitará o primeiro número.
+
+Em seguida, solicitará o segundo número.
+
+Será apresentado um menu com opções de operações:
+
+1: Adição
+
+2: Subtração
+
+3: Multiplicação
+
+4: Divisão
+
+5: Sair
+
+Digite o número da operação desejada.
+
+O resultado será exibido e o programa retornará ao menu inicial.
+
+Escolha a opção 5 para sair do programa.
+
+Observações
+
+Caso um valor inválido seja informado, o programa exibirá uma mensagem de erro e pedirá uma nova entrada.
+
+Durante a divisão, o programa tratará o erro de divisão por zero.
+
+Autor
+
+Desenvolvido por: [Seu Nome]
+
